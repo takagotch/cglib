@@ -31,6 +31,18 @@ public class TestKeyFactory extends net.sf.cglib.CodeGenTestCase {
   
   
   
+  public TestKeyFacory(String testName) {
+    super(testName);
+  }
+  
+  public static void main(String[] args) {
+    juint.textui.TestRunner.run(suite());
+  }
+  
+  public static Test suite() {
+    return new TestSuite(TestKeyFactory.class);
+  }
+  
   public void perform(ClassLoader loader) throws Throwable {
     KeyFacotry.create(loader, Mykey.class, null );
   }
